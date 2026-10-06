@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Tugas Akhir - Game Edukasi HAM</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- CDN Library Confetti Gratis -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+</head>
+<body>
+  <div class="game-container">
+    <h1>KASUS HAM: SUARA KEADILAN</h1>
+    
+    <!-- Area Status & Progress Bar -->
+    <div class="stats-box">
+      <div class="stat-item">
+        <span>Level: <b id="level">1</b> <span id="gelar" class="badge">Pengacara Magang</span></span>
+      </div>
+      
+      <div class="stat-item">
+        <span>XP HAM: <span id="xp-text">0/100</span></span>
+        <div class="progress-bar-container">
+          <div id="xp-bar" class="progress-bar xp"></div>
+        </div>
+      </div>
+
+      <div class="stat-item">
+        <span>Reputasi Publik: <span id="rep-text">50</span>%</span>
+        <div class="progress-bar-container">
+          <div id="rep-bar" class="progress-bar rep"></div>
+        </div>
+      </div>
+    </div>
+    
+    <hr>
+    
+    <!-- Area Pertanyaan & Timer -->
+    <div id="game-play-area">
+      <!-- Element Timer -->
+      <div class="timer-box">
+        <span>Waktu Memilih: <b id="timer-text">15</b>s</span>
+        <div class="progress-bar-container">
+          <div id="timer-bar" class="progress-bar timer"></div>
+        </div>
+      </div>
+
+      <h3 id="judul-kasus">Judul Kasus</h3>
+      <p id="deskripsi-kasus">Teks cerita akan muncul di sini...</p>
+
+      <div id="pilihan-container" class="button-group"></div>
+    </div>
+
+    <!-- Kotak Edukasi / Konsekuensi -->
+    <div id="edukasi-box" class="hide">
+      <h4>Hasil Konsekuensi & Edukasi HAM:</h4>
+      <p id="teks-edukasi"></p>
+      <button id="btn-lanjut" onclick="lanjutKasus()">Lanjut ke Kasus Berikutnya</button>
+    </div>
+
+    <!-- Area Ending -->
+    <div id="ending-box" class="hide">
+      <h2>🎉 PERMAINAN SELESAI!</h2>
+      <p id="pesan-ending">Terima kasih telah berjuang menegakkan keadilan.</p>
+      <button onclick="location.reload()">Main Lagi</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
